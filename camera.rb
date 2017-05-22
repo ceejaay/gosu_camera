@@ -4,7 +4,7 @@ class Camera < Gosu::Window
   def initialize
     super 300, 300
     self.caption = "cam"
-    @map = Array.new(60) {Array.new(60){["x", "o"].sample}}
+    @map = Array.new(MAP_DIMENSION) {Array.new(MAP_DIMENSION){["x", "o"].sample}}
     @tiles = Gosu::Font.new(15)
     @player = Gosu::Font.new(15)
     @camera_x = 0
@@ -16,8 +16,8 @@ class Camera < Gosu::Window
 
   def draw
     Gosu.translate(-@camera_x, -@camera_y) do
-      60.times do |x|
-        60.times do |y|
+      MAP_DIMENSION.times do |x|
+        MAP_DIMENSION.times do |y|
          tile = @map[y][x] 
          if tile == "x"
            @tiles.draw("x", x * 15, y * 15, 1, 1, 1, Gosu::Color::GRAY)
