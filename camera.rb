@@ -7,8 +7,8 @@ class Camera < Gosu::Window
     @map = Array.new(MAP_DIMENSION) {Array.new(MAP_DIMENSION){["x", "o"].sample}}
     @tiles = Gosu::Font.new(15)
     @player = Gosu::Font.new(15)
-    @camera_x = 0
-    @camera_y = 0
+    @camera_x = 275
+    @camera_y = 275
     @x = 275
     @y = 275
     @text = Gosu::Font.new(25)
