@@ -10,6 +10,7 @@ class GamePad < Gosu::Window
     close if button_down?(Gosu::KbEscape)
     #puts "hello" if button_down?(Gosu::GP_UP)
     #puts "#{Gosu::GP_BUTTON_0}" if button_down?(Gosu::GP_BUTTON_0)#A < 277
+=begin
     puts "#{Gosu::GP_BUTTON_1}" if button_down?(Gosu::GP_BUTTON_1)#B < 278
     puts "#{Gosu::GP_BUTTON_2}" if button_down?(Gosu::GP_BUTTON_2)#X < 279
     puts "#{Gosu::GP_BUTTON_3}" if button_down?(Gosu::GP_BUTTON_3)#Y < 280
@@ -21,10 +22,12 @@ class GamePad < Gosu::Window
     puts "#{Gosu::GP_RIGHT}" if button_down?(Gosu::GP_RIGHT)#RIGHT< 274
     puts "#{Gosu::GP_UP}" if button_down?(Gosu::GP_UP)#UP < 275
     puts "#{Gosu::GP_DOWN}" if button_down?(Gosu::GP_DOWN)#Down < 276
+=end
+   puts true if button_down?(Gosu::GP_RIGHT) and button_down?(Gosu::GP_BUTTON_3)
   end
 
   def button_down(id)
-    puts "#{Gosu::GP_BUTTON_0}" if id == Gosu::GP_BUTTON_0
+    puts "right" if id == Gosu::GP_RIGHT
   end
 
 end
